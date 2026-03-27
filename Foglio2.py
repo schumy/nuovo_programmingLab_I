@@ -34,15 +34,17 @@ def scambia(lista, i, j):
     #scambio gli elementi
     lista[i] = copia_j
     lista[j] = copia_i
+
+    #metodo più veloce
+    #lista[i], lista[j] = lista[j], lista[i]
     
 #ESERCIZIO 4
 #Scrivere una funzione che prende in input due liste e ritorna True se le due liste hanno
 #almeno un elemento in comune
 def comune(lista_1, lista_2):
     for i in lista_1:
-        for j in lista_2:
-            if i == j:
-                return True
+        if i in lista_2:    #il ciclo for lo fa in automatico
+            return True
     return False
 
 #ESERCIZIO 5
